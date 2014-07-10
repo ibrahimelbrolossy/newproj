@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B100BA3A-79E7-456E-BCCE-C8A5670AC6C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Takfila</RootNamespace>
+    <AssemblyName>Takfila</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Hema\Desktop\takfila\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>790C52D2CEE5048054283D48180E7CC4ED2CDB0C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Takfila_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationRunningHelper.cs" />
+    <Compile Include="bin\Debug\cus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ked_br.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ked_br.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ked_gad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ked_gad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\ked_ksm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ked_ksm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\mortd1.cs">
+      <DependentUpon>mortd1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="bin\Debug\MylocaldatabaseDataSet.cs">
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\MylocaldatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DbWork.cs" />
+    <Compile Include="Classes\MainTable.cs" />
+    <Compile Include="from web\webuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="from web\webuser.Designer.cs">
+      <DependentUpon>webuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ftpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ftpForm.designer.cs">
+      <DependentUpon>ftpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listDialogForm.designer.cs">
+      <DependentUpon>listDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loacaldata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loacaldata.Designer.cs">
+      <DependentUpon>loacaldata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\AutoPrintCls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocalReport\brviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\brviewer.Designer.cs">
+      <DependentUpon>brviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\CurrencyInfo.cs" />
+    <Compile Include="LocalReport\cusmor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\cusmor.Designer.cs">
+      <DependentUpon>cusmor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\CusView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\CusView.Designer.cs">
+      <DependentUpon>CusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\DarM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\DarM.Designer.cs">
+      <DependentUpon>DarM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\grama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\grama.Designer.cs">
+      <DependentUpon>grama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\kedksmmas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\kedksmmas.Designer.cs">
+      <DependentUpon>kedksmmas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\morcus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\morcus.Designer.cs">
+      <DependentUpon>morcus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\MortadRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\MortadRep.Designer.cs">
+      <DependentUpon>MortadRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\MyDataSet.cs">
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocalReport\MyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\sad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\sad.Designer.cs">
+      <DependentUpon>sad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\saderet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\saderet.Designer.cs">
+      <DependentUpon>saderet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalReport\ToWord.cs" />
+    <Compile Include="LocalReport\viewr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalReport\viewr.Designer.cs">
+      <DependentUpon>viewr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maftouh.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MorEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MorEntry.Designer.cs">
+      <DependentUpon>MorEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mortad.cs" />
+    <Compile Include="mortd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mortd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MylocaldatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MylocaldatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MylocaldatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PreparePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreparePrint.Designer.cs">
+      <DependentUpon>PreparePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>repdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="repmor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repmor.Designer.cs">
+      <DependentUpon>repmor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sader_Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sader_Bank.Designer.cs">
+      <DependentUpon>Sader_Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEntry.Designer.cs">
+      <DependentUpon>UserEntry.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bin\Debug\cus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ked_br.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ked_br.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ked_gad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ked_gad.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\ked_ksm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ked_ksm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\mortd1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mortd1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="from web\webuser.resx">
+      <DependentUpon>webuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ftpForm.resx">
+      <DependentUpon>ftpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listDialogForm.resx">
+      <DependentUpon>listDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loacaldata.resx">
+      <DependentUpon>loacaldata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\brviewer.resx">
+      <DependentUpon>brviewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\ked ksm.rdlc" />
+    <EmbeddedResource Include="LocalReport\kedksmmas.resx">
+      <DependentUpon>kedksmmas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\saderet.rdlc" />
+    <EmbeddedResource Include="LocalReport\saderbank.rdlc" />
+    <EmbeddedResource Include="LocalReport\grama.resx">
+      <DependentUpon>grama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\gramat.rdlc" />
+    <EmbeddedResource Include="LocalReport\MorCus.rdlc" />
+    <EmbeddedResource Include="LocalReport\cusmor.resx">
+      <DependentUpon>cusmor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\custMor.rdlc" />
+    <EmbeddedResource Include="LocalReport\DarM.resx">
+      <DependentUpon>DarM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\morcus.resx">
+      <DependentUpon>morcus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\sad.resx">
+      <DependentUpon>sad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\saderDR.rdlc" />
+    <EmbeddedResource Include="LocalReport\MortadRep.resx">
+      <DependentUpon>MortadRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\Mortd.rdlc" />
+    <EmbeddedResource Include="LocalReport\Customer.rdlc" />
+    <EmbeddedResource Include="LocalReport\CusView.resx">
+      <DependentUpon>CusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\kedbranch.rdlc" />
+    <EmbeddedResource Include="LocalReport\Report1.rdlc" />
+    <EmbeddedResource Include="LocalReport\saderet.resx">
+      <DependentUpon>saderet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalReport\viewr.resx">
+      <DependentUpon>viewr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MorEntry.resx">
+      <DependentUpon>MorEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mortd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mortd.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreparePrint.resx">
+      <DependentUpon>PreparePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repmor.resx">
+      <DependentUpon>repmor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sader_Bank.resx">
+      <DependentUpon>Sader_Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserEntry.resx">
+      <DependentUpon>UserEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="bin\Debug\MylocaldatabaseDataSet.xsc">
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\MylocaldatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MylocaldatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\MylocaldatabaseDataSet.xss">
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LocalReport\MyDataSet.xsc">
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LocalReport\MyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LocalReport\MyDataSet.xss">
+      <DependentUpon>MyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MylocaldatabaseDataSet.xsc">
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MylocaldatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MylocaldatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MylocaldatabaseDataSet.xss">
+      <DependentUpon>MylocaldatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MylocaldatabaseDataSet1.xsc">
+      <DependentUpon>MylocaldatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MylocaldatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MylocaldatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MylocaldatabaseDataSet1.xss">
+      <DependentUpon>MylocaldatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\repdataset.branchDataTable.datasource" />
+    <None Include="Properties\DataSources\repdataset.branchRow.datasource" />
+    <None Include="Properties\DataSources\repdataset.branchRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\repdataset.branchRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\repdataset.datasource" />
+    <None Include="Properties\DataSources\repdataset.ked_gadDataTable.datasource" />
+    <None Include="Properties\DataSources\repdataset.ked_gadRow.datasource" />
+    <None Include="Properties\DataSources\repdataset.ked_gadRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\repdataset.ked_gadRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.branchTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.CustomersTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.mortdTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.Sader_B_ETableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.sherkaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.s_kindTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Takfila.bin.Debug.MylocaldatabaseDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Takfila.LocalReport.MyDataSet+KedGadDataTable.datasource" />
+    <None Include="Properties\DataSources\Takfila.LocalReport.MyDataSet.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.branchTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.CustomersTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.mortdTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.Sader_B_ETableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.sherkaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.s_kindTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Takfila.MylocaldatabaseDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Takfila.repdatasetTableAdapters.branchTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.repdatasetTableAdapters.ked_gadTableAdapter.datasource" />
+    <None Include="Properties\DataSources\Takfila.repdatasetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Takfila.repdatasetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="repdataset.xsc">
+      <DependentUpon>repdataset.xsd</DependentUpon>
+    </None>
+    <None Include="repdataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>repdataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="repdataset.xss">
+      <DependentUpon>repdataset.xsd</DependentUpon>
+    </None>
+    <None Include="Takfila_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Mylocaldatabase.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\key4.jpg" />
+    <None Include="Resources\close-icon.png" />
+    <None Include="Resources\Actions-address-book-new-icon.png" />
+    <None Include="Resources\save-as-icon.png" />
+    <None Include="Resources\Fast-forward-icon.png" />
+    <None Include="Resources\Skip-backward-icon1.png" />
+    <None Include="Resources\Fast-backward-icon %281%29.png" />
+    <None Include="Resources\Document-Write-icon.png" />
+    <None Include="Resources\Skip-forward-icon.png" />
+    <None Include="Resources\Skip-backward-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
